@@ -8,5 +8,9 @@ import "../styles/index.css";
 //import your own components
 import Home from "./component/home.jsx";
 
+let digito1= 0;
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+setInterval(()=>{
+    digito1++;
+    ReactDOM.render(<Home digito1={digito1}/>, document.querySelector("#app"))}, 1000);
+
